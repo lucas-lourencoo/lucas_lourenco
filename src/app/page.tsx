@@ -2,112 +2,114 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <main className="h-screen bg-[#121212] text-white">
+      <header className="flex w-full uppercase text-sm items-center justify-center px-12 h-16">
+        <Image src="/logo.webp" alt="nego tech logo" width={42} height={42} />
+
+        <nav className="flex-1">
+          <ul className="flex list-none items-center justify-center gap-2 text-zinc-400 ">
+            <li className="hover:text-white cursor-pointer hover:bg-zinc-800/70 px-6 py-3 rounded-lg transition">
+              <a href="">home</a>
+            </li>
+            <li className="hover:text-white cursor-pointer hover:bg-zinc-800/70 px-6 py-3 rounded-lg transition">
+              <a href="">sobre</a>
+            </li>
+            <li className="hover:text-white cursor-pointer hover:bg-zinc-800/70 px-6 py-3 rounded-lg transition">
+              <a href="">projetos</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <div className="grid grid-cols-2 max-w-[1080px] h-[calc(100%-6.5rem)] w-full m-auto gap-20">
+        <section className="flex items-start justify-center flex-col">
+          <Image
+            src="/profile.jpeg"
+            width={140}
+            height={140}
+            quality={100}
+            className="rounded-full filter grayscale"
+            alt="Lucas Lourenço"
+          />
+          <h1 className="mt-6 text-5xl font-bold leading-none text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500 inline">
+            Olá! Sou Lucas Lourenço.
+          </h1>
+
+          <span className="mt-8 leading-relaxed text-lg text-zinc-400">
+            Desenvolvedor front-end com mais de 5 anos de experiência na área,
+            apaixonado por solucionar problemas através da programação e do
+            design. Busco sempre estar atualizado com as novas tendências do
+            mercado e contribuir para o sucesso das equipes e projetos nos quais
+            estou envolvido.
+          </span>
+        </section>
+
+        <section className="flex items-start justify-center flex-col gap-4 max-h-full overflow-auto">
+          <div className="bg-zinc-800/60 w-full rounded-lg px-8 py-6 flex flex-col gap-2">
+            <h3 className="text-transparent text-xs bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500 inline font-semibold uppercase">
+              trabalho
+            </h3>
+            <span className="text-white text-2xl font-semibold">Keep Safe</span>
+            <span className="text-sm text-zinc-400">
+              Responsável pela manutenção e criação de novas features para o
+              gateway de pagamento e white-label provider.
+            </span>
+          </div>
+          <div className="bg-zinc-800/60 w-full rounded-lg px-8 py-6 flex flex-col gap-2">
+            <h3 className="text-transparent text-xs bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500 inline font-semibold uppercase">
+              trabalho
+            </h3>
+            <span className="text-white text-2xl font-semibold">Dotkon</span>
+            <span className="text-sm text-zinc-400">
+              Manutenção e desenvolvimento de novas funcionalidades para um
+              produto da Amaggi, uma das maiores empresas do agronegócio do
+              Brasil, utilizando tecnologias como React e ferramentas como
+              Redux, Leaflet e Next.
+            </span>
+          </div>
+          <div className="bg-zinc-800/60 w-full rounded-lg px-8 py-6 flex flex-col gap-2">
+            <h3 className="text-transparent text-xs bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500 inline font-semibold uppercase">
+              trabalho
+            </h3>
+            <span className="text-white text-2xl font-semibold">
+              Ministério Atos de Justiça
+            </span>
+            <span className="text-sm text-zinc-400">
+              Responsável pela manutenção e criação de novas features para o
+              gateway de pagamento e white-label provider.
+            </span>
+          </div>
+          <div className="bg-zinc-800/60 w-full rounded-lg px-8 py-6 flex flex-col gap-2">
+            <h3 className="text-transparent text-xs bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500 inline font-semibold uppercase">
+              trabalho
+            </h3>
+            <span className="text-white text-2xl font-semibold">
+              John Deere
+            </span>
+            <span className="text-sm text-zinc-400">
+              Responsável pela manutenção e criação de novas features para o
+              gateway de pagamento e white-label provider.
+            </span>
+          </div>
+        </section>
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <footer className="flex items-center justify-center w-full text-xs">
+        <ul className="flex list-none items-center justify-center gap-10 text-zinc-400 ">
+          <li className="hover:text-white transition">
+            <a href="">email</a>
+          </li>
+          <li className="hover:text-white transition">
+            <a href="">github</a>
+          </li>
+          <li className="hover:text-white transition">
+            <a href="">linkedin</a>
+          </li>
+          <li className="hover:text-white transition">
+            <a href="">instagram</a>
+          </li>
+        </ul>
+      </footer>
     </main>
   );
 }
